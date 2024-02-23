@@ -13,15 +13,15 @@ Conhecer o Azure e aprender a utilizar a plataforma e unir o conhecimento teóri
 
 ## Passo-a-Passo 🛠️
 
-### 1.	Crie um novo repositório no GitHub
-  1.1 Vá para o GitHub e faça login na sua conta.<br>
-  1.2	Clique em + no canto superior direito e selecione New repository.<br>
-  1.3	Dê um nome ao seu repositório e clique em Create repository.<br><br>
+### 1. Crie um novo repositório no GitHub
+   * 1.1 Vá para o GitHub e faça login na sua conta.
+   * 1.2 Clique em + no canto superior direito e selecione New repository.
+   * 1.3 Dê um nome ao seu repositório e clique em Create repository.
+
 
 ### 2. Criar um espaço de trabalho (workspace) do Azure Machine Learning
 Para utilizar o Azure Machine Learning, é necessário aprovisionar um espaço de trabalho do Azure Machine Learning na sua subscrição do Azure. Depois, você poderá usar o estúdio Azure Machine Learning para trabalhar com os recursos do seu workspace.<br><br>
-
-Ps: se você já tiver um espaço de trabalho do Azure Machine Learning, poderá usá-lo e pular para a próxima tarefa.<br><br>
+<b>Ps:</b> Se você já tiver um espaço de trabalho do Azure Machine Learning, poderá usá-lo e pular para a próxima tarefa.<br><br>
 
 2.1 Entre no portal do Azure em https://portal.azure.com usando suas credenciais da Microsoft.<br>
 2.2	Selecione + Criar um recurso , pesquise Machine Learning e crie um novo recurso do Azure Machine Learning com as seguintes configurações:<br>
@@ -42,72 +42,71 @@ Ps: se você já tiver um espaço de trabalho do Azure Machine Learning, poderá
 <b>> Citação:</b> Os dados usados neste exercício são derivados da Capital Bikeshare e são usados de acordo com o contrato de licença de dados publicado.<br><br>
 3.1	No Azure Machine Learning Studio , veja a página Automated ML (em Authoring).<br>
 3.2	Crie um novo trabalho de ML automatizado com as seguintes configurações, usando Next conforme necessário para avançar pela interface do usuário:<br>
-&nbsp;&nbsp;&nbsp;<b>- Configurações básicas:</b><br>
+&nbsp;&nbsp;&nbsp;<b>> Configurações básicas:</b><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Trabalho nome : mslearn - bicicleta - automl<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Nome do novo experimento : mslearn -bike-rental<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Descrição : Aprendizado de máquina automatizado para previsão de aluguel de bicicletas<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Marcadores : nenhum<br>
 
-&nbsp;&nbsp;&nbsp;<b>- Tipo de tarefa e dados:</b><br>
+&nbsp;&nbsp;&nbsp;<b>> Tipo de tarefa e dados:</b><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Selecione tarefa tipo : Regressão<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Selecionar conjunto de dados : crie um novo conjunto de dados com as seguintes configurações:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Tipo de dados:<br>
-
-	Nome : bicicleta - aluguel
-	Descrição : Histórico bicicleta dados de aluguel
-	Tipo : Tabular
-o	Fonte de dados :
-	Selecione De arquivos da web
-o	URL da Web :
-	URL da Web : https://aka.ms/bike-rentals
-	Ignorar validação de dados : não selecionar
-o	Configurações :
-	Formato de arquivo : Delimitado
-	Delimitador : Vírgula
-	Codificação : UTF-8
-	Cabeçalhos de coluna : apenas o primeiro arquivo possui cabeçalhos
-	Pular linhas : Nenhuma
-	O conjunto de dados contém dados multilinhas : não selecione
-o	Esquema :
-	Incluir todas as colunas exceto Caminho
-	Reveja o automaticamente detectou tipos
-Selecione Criar . Após a criação do conjunto de dados, selecione o conjunto de dados de aluguel de bicicletas para continuar a enviar o trabalho de ML automatizado.
-	Configurações de tarefa :
-o	Tipo de tarefa : Regressão
-o	Conjunto de dados : bicicleta - aluguel
-o	Coluna de destino : Aluguéis ( inteiro )
-o	Adicional definições de configuração :
-o	Métrica primária : raiz do erro quadrático médio normalizado
-o	Explicar melhor modelo : Não selecionado
-o	Usar todos os modelos suportados : Desmarcado . Você restringirá o trabalho para tentar apenas alguns algoritmos específicos.
-o	Modelos permitidos : Selecione apenas RandomForest e LightGBM — normalmente você gostaria de tentar o máximo possível, mas cada modelo adicionado aumenta o tempo necessário para executar o trabalho.
-o	Limites : Expandir esse seção
-o	Máximo de testes : 3
-o	Máximo simultâneo testes : 3
-o	Máximo de nós : 3
-o	Limite de pontuação da métrica : 0,085 ( para que, se um modelo atingir uma pontuação da métrica de erro quadrático médio normalizado de 0,085 ou menos, o trabalho termina. )
-o	Tempo limite : 15
-o	Tempo limite de iteração : 15
-o	Habilitar cedo rescisão : selecionado
-o	Validação e teste :
-o	Validação tipo : divisão de validação de trem
-o	Percentagem de dados de validação : 10
-o	Conjunto de dados de teste : Nenhum
-	Calcular :
-o	Selecione o tipo de computação : sem servidor
-o	Tipo de máquina virtual : CPU
-o	Camada de máquina virtual : Dedicada
-o	Tamanho da máquina virtual : Standard_DS3_V2*
-o	Número de instâncias : 1
-* Se a sua assinatura restringir os tamanhos de VM disponíveis para você, escolha qualquer tamanho disponível.
-3.	Envie o trabalho de treinamento. Ele inicia automaticamente.
-4.	Espere o trabalho terminar. Pode demorar um pouco!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nome: bicicleta - aluguel<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Descrição: Histórico bicicleta dados de aluguel<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tipo: Tabular<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Fonte de dados:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selecione <b>De arquivos da web</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* URL da Web:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;URL da Web: https://aka.ms/bike-rentals<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ignorar validação de dados: não selecionar<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Configurações:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Formato de arquivo: Delimitado<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Delimitador: Vírgula<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Codificação: UTF-8<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cabeçalhos de coluna: apenas o primeiro arquivo possui cabeçalhos<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pular linhas: Nenhuma<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O conjunto de dados contém dados multilinhas: não selecione<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Esquema:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Incluir todas as colunas exceto Caminho<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reveja o automaticamente detectou tipos<br><br>
+* Selecione Criar . Após a criação do conjunto de dados, selecione o conjunto de dados de aluguel de bicicletas para continuar a enviar o trabalho de ML automatizado.<br><br>
+&nbsp;&nbsp;&nbsp;<b>> Configurações de tarefa:</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Tipo de tarefa: Regressão<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Conjunto de dados: bicicleta - aluguel<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Coluna de destino: Aluguéis (inteiro)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Adicional definições de configuração:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Métrica primária: raiz do erro quadrático médio normalizado<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Explicar melhor modelo: Não selecionado<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Usar todos os modelos suportados : Desmarcado . Você restringirá o trabalho para tentar apenas alguns algoritmos específicos.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Modelos permitidos: Selecione apenas RandomForest e LightGBM — normalmente você gostaria de tentar o máximo possível, mas cada modelo adicionado aumenta o tempo necessário para executar o trabalho.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Limites: Expandir esse seção<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Máximo de testes: 3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Máximo simultâneo testes: 3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Máximo de nós: 3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Limite de pontuação da métrica : 0,085 (para que, se um modelo atingir uma pontuação da métrica de erro quadrático médio normalizado de 0,085 ou menos, o trabalho termina)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tempo limite: 15<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tempo limite de iteração: 15<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Habilitar cedo rescisão: selecionado<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Validação e teste:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Validação tipo: divisão de validação de trem<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Percentagem de dados de validação: 10<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conjunto de dados de teste: Nenhum<br>
+&nbsp;&nbsp;&nbsp;<b>> Calcular:</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Selecione o tipo de computação: sem servidor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Tipo de máquina virtual: CPU<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Camada de máquina virtual: Dedicada<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Tamanho da máquina virtual: Standard_DS3_V2*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Número de instâncias: 1<br><br>
+* Se a sua assinatura restringir os tamanhos de VM disponíveis para você, escolha qualquer tamanho disponível.<br><br>
+4.	Envie o trabalho de treinamento. Ele inicia automaticamente.<br>
+* Espere o trabalho terminar. Pode demorar um pouco!
 
 
 ---
 ##  Desafio: Profile README
 
- Como Entregar esse projeto?
+### Como Entregar esse projeto?
 Chegou a hora de você construir um portfólio ainda mais rico e impressionar futuros recrutadores, para isso é sempre importante mostrar os resultados do seu esforço e como você os obteve deixando claro o seu racional, para isso faça da seguinte maneira: 😊💙.
 
 1. Crie um novo repositório no github com um nome a sua preferência
