@@ -114,3 +114,10 @@ Chegou a hora de você construir um portfólio ainda mais rico e impressionar fu
 3. Escreva o passo a passo desse processo em um readme.md de como você chegou nessa etapa
 4. Salve nesse repositório o readme.md e o arquivo .json de pontos de extremidade
 5. Compartilhe conosco o link desse repositório através do botão 'entregar projeto'
+
+---
+
+## Contatos 
+[![Linkedin](https://img.shields.io/badge/Linkedin-000?style=for-the-badge&logo=linkedin&logoColor=30A3DC)](https://www.linkedin.com/in/manuelfbfilho)
+<br>
+[![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=30A3DC)](https://github.com/manuelfbfilho)
