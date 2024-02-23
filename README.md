@@ -120,7 +120,6 @@ Para utilizar o Azure Machine Learning, é necessário aprovisionar um espaço d
     JSON
 
 
-
 ---
 ##  Desafio: Profile README
 
