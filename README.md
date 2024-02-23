@@ -99,8 +99,26 @@ Para utilizar o Azure Machine Learning, é necessário aprovisionar um espaço d
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Tamanho da máquina virtual: Standard_DS3_V2*<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Número de instâncias: 1<br><br>
 * Se a sua assinatura restringir os tamanhos de VM disponíveis para você, escolha qualquer tamanho disponível.<br><br>
-4.	Envie o trabalho de treinamento. Ele inicia automaticamente.<br>
-* Espere o trabalho terminar. Pode demorar um pouco!
+4.	Envie o trabalho de treinamento. Ele inicia automaticamente.
+* Espere o trabalho terminar. Pode demorar um pouco! (Em geral essa execução dura em torno de 15 muntos)
+5. Após finalizado, no menu lateral esquerdo iremos clicar em <i>Modelos</i>.
+6. Clicaremos em <i>+Registro</i> e selecionaremos a opção <i>'de uma saída de trabalho'</i>.
+7. Selecionaremos o trabalho que criamos que é o <i>'mslearn-bike-automl'</i> e clicaremos em avançar.
+8. Na parte de selecionar saída, já irá aparecer preenchido como padrão, deixe como estiver.
+  * Tipo de Modelo: MLflow Saída de trabalho: best_model...
+9. Em configuração do modelo, coloque as informações abaixo e clique em avançar.
+  * Nome: mslearnbikeauto4
+  * Descrição: Deixe em branco.
+  * Versão: 1
+  * Marcas: Não precisa adicionar
+10. Em examinar, clique em <i>registro</i>.
+11. No menu lateral esquerdo, agora clicaremos em <i>Pontos Extremidade</i>.
+12. Em pontos de Extremidade clicaremos e Criar e então selecionaremos 'mslearnbikeauto4', e clicaremos no botão selecionar.
+13. Na aba de implantar, altere o nome do ponto de extremidade para 'laboratoriocertificaoai900-extr' e clique em implantar e espere a conclusão do processo.
+14. Após a conclusão da criação do ponto de extremidade, você deverá clica no menu lateral em ponto de extremidade, selecionar então o ponto de extremidade criado e clicar em testar.
+15. Na aba 'inserir dados para teste de ponto de extremidade', insira os seguintes dados em JSON e clique em testar.
+    JSON
+
 
 
 ---
