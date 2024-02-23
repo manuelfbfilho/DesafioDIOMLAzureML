@@ -118,6 +118,7 @@ Para utilizar o Azure Machine Learning, é necessário aprovisionar um espaço d
 14. Após a conclusão da criação do ponto de extremidade, você deverá clica no menu lateral em ponto de extremidade, selecionar então o ponto de extremidade criado e clicar em testar.
 15. Na aba 'inserir dados para teste de ponto de extremidade', insira os seguintes dados em JSON e clique em testar.<br>
     JSON
+
 {
    "input_data": { 
      "data": [
