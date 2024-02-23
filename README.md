@@ -119,27 +119,7 @@ Para utilizar o Azure Machine Learning, é necessário aprovisionar um espaço d
 15. Na aba 'inserir dados para teste de ponto de extremidade', insira os seguintes dados em JSON e clique em testar.<br>
     JSON
 
-{
-   "input_data": { 
-     "data": [
-       {
-         "day": 1,
-         "mnth": 1,   
-         "year": 2022,
-         "season": 2,
-         "holiday": 0,
-         "weekday": 1,
-         "workingday": 1,
-         "weathersit": 2, 
-         "temp": 0.3, 
-         "atemp": 0.3,
-         "hum": 0.3,
-         "windspeed": 0.3 
-       }
-     ]    
-   },   
-   "GlobalParameters": 1.0
- }
+
 16. O Resultado será apresentado no quadro resultado do teste. Copie o resultado e cole em um bloco de notas com nome <i>ResultadoPredict-Rentals.json</i>
 
 #### Parabéns! Você fez todo o processo!
