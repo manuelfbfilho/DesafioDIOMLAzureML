@@ -117,7 +117,7 @@ Para utilizar o Azure Machine Learning, é necessário aprovisionar um espaço d
 13. Na aba de implantar, altere o nome do ponto de extremidade para 'laboratoriocertificaoai900-extr' e clique em implantar e espere a conclusão do processo.
 14. Após a conclusão da criação do ponto de extremidade, você deverá clica no menu lateral em ponto de extremidade, selecionar então o ponto de extremidade criado e clicar em testar.
 15. Na aba 'inserir dados para teste de ponto de extremidade', insira os seguintes dados em JSON e clique em testar.<br>
-\```json
+```json
 {
    "Inputs": { 
      "data": [
@@ -139,7 +139,7 @@ Para utilizar o Azure Machine Learning, é necessário aprovisionar um espaço d
    },   
    "GlobalParameters": 1.0
 }
-\```
+```
 
 
 16. O Resultado será apresentado no quadro resultado do teste. Copie o resultado e cole em um bloco de notas com nome <i>ResultadoPredict-Rentals.json</i>
